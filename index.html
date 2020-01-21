@@ -97,6 +97,9 @@
 </head>
 
 <body>
+	<audio controls="controls" loop="loop">
+    <source src="1.ogg" type="audio/mpeg">
+</audio>
 <!--更改为你女朋友的头像-->
 <div class="cs">
     <img src="http:////i1.hdslb.com/bfs/face/c9fbc8015b6a3fad18f34ab7653fa64638459be6.jpg_134x134.jpg" id="logo">
@@ -135,6 +138,9 @@
         init: function () {
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
+		var audio = document.getElementById("audio")
+            console.log(audio)
+            audio.play()
 			//想说的话
             S.UI.simulate("凌凡|Happy|Birthday|to|You|#countdown 3|生日快乐");
             S.Drawing.loop(function () {
@@ -669,8 +675,6 @@
     }());
     S.init();
 </script>
-<audio autoplay="autoplay" loop="loop">
-    <source src="1.ogg" type="audio/mpeg">
-</audio>
+
 </body>
 </html>
